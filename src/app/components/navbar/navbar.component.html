@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">Empleados CRUD</a>
+        <button (click)="collapsed = !collapsed" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: #1a1a1a !important;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"  [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+            <div class="navbar-nav ml-auto">
+                <!-- <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a> -->
+                <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/empleados"><i class="fas fa-users mr-1"></i>Empleados</a>
+                <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/empleados/add"><i class="fas fa-user-plus mr-1"></i>Agregar empleado</a>
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+            </div>
+        </div>
+    </div>
+</nav>

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "empleados-frontend"
+    }
+  },
+  "defaultProject": "empleados-frontend",
+  "cli": {
+    "analytics": false
+  }
 }

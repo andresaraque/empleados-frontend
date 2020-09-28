@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@sweetalert2/theme-minimal/minimal.scss';
+.shadow {
+    -webkit-box-shadow: 3px 4px 10px 1px rgba(0,0,0,0.39);
+    -moz-box-shadow: 3px 4px 10px 1px rgba(0,0,0,0.39);
+    box-shadow: 3px 4px 10px 1px rgba(0,0,0,0.39);
+}
+
+// Estilizar las alertas de sweetalert2
+.swal2-popup {
+    // background-color: rgba(0, 0, 0, 0.8) !important;
+    .swal2-title {
+        // font-size: 15px !important;
+        // color: #1a1a1a !important;
+    }
+    // .swal2-content {
+    //     // font-size: 13px !important;
+    // }
+    .swal2-styled {
+        // background-color: #1a1a1a !important;
+    }
+    .swal2-icon {
+        border-color: #1a1a1a !important;
+        color: #1a1a1a !important;
+        .swal2-x-mark-line-left, .swal2-x-mark-line-right,
+        .swal2-success-line-long, .swal2-success-line-tip {
+            background-color: #1a1a1a !important;
+        }
+        .swal2-success-ring {
+            border: 0.25em solid #1a1a1a !important;
+        }
+    }
+}

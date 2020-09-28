@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-4 offset-md-2">
+        <div class="card shadow mb-2">   
+            <app-loading *ngIf="loading"></app-loading>         
+            <div class="card-body" *ngIf="!loading">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="empleado.Nombre" name="Nombre" placeholder="Nombre" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="empleado.Cargo" name="Cargo" placeholder="Cargo Laboral" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [ngModel]="empleado.Salario | number" (ngModelChange)="quitarComa($event)" name="Salario" placeholder="Salario Laboral, Ej: $400000" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="url" [(ngModel)]="empleado.Img" name="Img" placeholder="Url de la imagen" class="form-control" autofocus>
+                    </div>
+                    <button class="btn btn-primary btn-block" (click)="edit ? updateEmpleado(): saveEmpleado()">{{edit ? 'Actualizar': 'Guardar'}}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow card-body text-center mb-2">
+            <app-loading *ngIf="loading"></app-loading>
+            <div *ngIf="!loading">
+                <img [src]="empleado.Img.length < 30 ? './../../../assets/imgs/no-image.png': empleado.Img" alt="" class="card-img-top">
+                <h5 class="card-title mt-3">{{empleado.Nombre == '' ? 'Nombre' : empleado.Nombre}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{empleado.Cargo == '' ? 'Cargo Laboral' : empleado.Cargo}}</h6>
+                <p class="card-text">{{empleado.Salario == null ? 'Salario Laboral': 'Salario: $'+transfomarNumero(empleado.Salario)}}</p>
+            </div>
+        </div>
+    </div>
+</div>
