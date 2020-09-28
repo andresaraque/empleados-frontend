@@ -32,7 +32,7 @@ Proyecto CRUD con [Angular CLI](https://github.com/angular/angular-cli) version 
     ```
 ### POST
 ![post.png](./src/assets/imgs/post.png)
-### POST
+### DELETE
 ![delete.png](./src/assets/imgs/delete.png)
-### POST
+### UPDATE
 ![update.png](./src/assets/imgs/update.png)
